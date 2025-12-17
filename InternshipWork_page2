@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase – Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff6f00, #ff8f00);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ff6f00;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .product-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .product-details img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .details h2 {
+      margin-top: 0;
+    }
+
+    .price {
+      color: #ff6f00;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .details ul {
+      padding-left: 18px;
+    }
+
+    .details button {
+      background: #ff6f00;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ShopEase</h1>
+  <p>Product Details</p>
+</header>
+
+<nav>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="#">Categories</a>
+    <a href="#">Offers</a>
+  </div>
+  <strong>🛒 Cart (0)</strong>
+</nav>
+
+<div class="container">
+  <div class="product-details">
+    <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Stylish Backpack">
+
+    <div class="details">
+      <h2>Stylish Backpack</h2>
+      <p class="price">₹1,499</p>
+      <p>
+        This stylish backpack is perfect for daily use, travel, and college.
+        Designed with comfort, durability, and modern looks.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>Water-resistant material</li>
+        <li>Multiple storage compartments</li>
+        <li>Comfortable shoulder straps</li>
+        <li>Lightweight and durable</li>
+      </ul>
+
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ShopEase | Product Page</p>
+</footer>
+
+</body>
+</html>
