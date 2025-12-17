@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase – Shopping App Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #ff6f00, #ff8f00);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    /* Navigation */
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .menu a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #ff6f00;
+      font-weight: 600;
+    }
+
+    nav .cart {
+      font-weight: bold;
+    }
+
+    /* Hero */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1523275335684-37898b6baf30") center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      background: rgba(0,0,0,0.5);
+      padding: 15px 25px;
+      border-radius: 10px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    /* Products */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .price {
+      color: #ff6f00;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background: #ff6f00;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ShopEase</h1>
+  <p>Your one-stop online shopping destination</p>
+</header>
+
+<nav>
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#">Categories</a>
+    <a href="#">Offers</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="cart">🛒 Cart (0)</div>
+</nav>
+
+<section class="hero">
+  <h2>Big Deals • Best Prices • Fast Delivery</h2>
+</section>
+
+<div class="container">
+  <h2>Featured Products</h2>
+  <div class="products">
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Bag">
+      <h3>Stylish Backpack</h3>
+      <p class="price">₹1,499</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Shoes">
+      <h3>Running Shoes</h3>
+      <p class="price">₹2,299</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
+      <h3>Wireless Headphones</h3>
+      <p class="price">₹3,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Watch">
+      <h3>Smart Watch</h3>
+      <p class="price">₹5,499</p>
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ShopEase | Simple Shopping App UI</p>
+</footer>
+
+</body>
+</html>
