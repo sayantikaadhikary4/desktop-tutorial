@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase – Buy Now / Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff6f00, #ff8f00);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ff6f00;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .checkout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    /* Form */
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* Order Summary */
+    .summary {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .summary p {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+
+    .total {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ff6f00;
+    }
+
+    button {
+      background: #ff6f00;
+      border: none;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ShopEase</h1>
+  <p>Secure Checkout</p>
+</header>
+
+<nav>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+  </div>
+  <strong>🛒 Cart (1)</strong>
+</nav>
+
+<div class="container">
+  <div class="checkout">
+
+    <!-- Shipping Details -->
+    <div>
+      <h2>Shipping Address</h2>
+      <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="10-digit mobile number">
+
+        <label>Address</label>
+        <textarea rows="3" placeholder="House no, Street, City"></textarea>
+
+        <label>Payment Method</label>
+        <select>
+          <option>Cash on Delivery</option>
+          <option>UPI</option>
+          <option>Debit / Credit Card</option>
+        </select>
+      </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="summary">
+      <h2>Order Summary</h2>
+      <p><span>Stylish Backpack</span><span>₹1,499</span></p>
+      <p><span>Delivery</span><span>₹50</span></p>
+      <hr>
+      <p class="total"><span>Total</span><span>₹1,549</span></p>
+      <button>Place Order</button>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ShopEase | Checkout Page</p>
+</footer>
+
+</body>
+</html>
