@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b88b8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #ffffff;
+            width: 380px;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #dcdcdc;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: #e8e8e8;
+        }
+
+        .submit-btn {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn button {
+            background: #0b6e91;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .submit-btn button:hover {
+            background: #095b77;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form>
+        <div class="form-group">
+            <input type="text" placeholder="Name*" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" placeholder="Email*" required>
+        </div>
+
+        <div class="form-group">
+            <input type="tel" placeholder="Phone*" required>
+        </div>
+
+        <div class="form-group">
+            <select required>
+                <option value="">Subject*</option>
+                <option>Web Development</option>
+                <option>Java</option>
+                <option>Python</option>
+                <option>UI/UX</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <textarea placeholder="Message*" required></textarea>
+        </div>
+
+        <div class="submit-btn">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
