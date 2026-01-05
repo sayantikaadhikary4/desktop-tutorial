@@ -1,0 +1,117 @@
+import { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun, Github, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Portfolio() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+      {/* Header */}
+      <header className="flex justify-between items-center p-6 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur z-50 shadow-sm">
+        <h1 className="text-2xl font-bold">Sayantika Adhikary</h1>
+        <Button variant="outline" onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? <Sun /> : <Moon />}
+        </Button>
+      </header>
+
+      {/* Hero Section */}
+      <section id="home" className="flex flex-col items-center text-center py-20 px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl font-extrabold mb-4"
+        >
+          Aspiring Software Engineer
+        </motion.h2>
+        <p className="max-w-3xl text-lg leading-relaxed">
+          Seeking a challenging entry-level software engineer position in a reputable organization to leverage strong analytical, problem-solving, and collaboration skills gained through academic projects and internships. Committed to applying technical proficiency in frontend, backend, and data analysis while actively contributing to team goals. Intern at <strong>YCSAS</strong>.
+        </p>
+      </section>
+
+      {/* About Me */}
+      <section id="about" className="py-16 px-6 bg-gray-100 dark:bg-gray-800">
+        <h3 className="text-3xl font-bold text-center mb-8">About Me</h3>
+        <Card className="max-w-4xl mx-auto">
+          <CardContent className="p-6 space-y-4">
+            <p>
+              I am a passionate Computer Engineering student with a strong interest in modern web technologies. My career goal is to grow as a full-stack developer and contribute to impactful software solutions.
+            </p>
+            <p>
+              I joined the <strong>YCSAS Internship</strong> to gain hands-on industry exposure, improve my coding practices, and work on real-world projects using modern development tools.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="py-16 px-6">
+        <h3 className="text-3xl font-bold text-center mb-10">Skills</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {["HTML", "CSS", "JavaScript", "React", "Git", "GitHub", "Basic Backend", "UI/UX Basics"].map(
+            (skill) => (
+              <motion.div whileHover={{ scale: 1.1 }} key={skill}>
+                <Card className="text-center">
+                  <CardContent className="p-4 font-semibold">{skill}</CardContent>
+                </Card>
+              </motion.div>
+            )
+          )}
+        </div>
+      </section>
+
+      {/* Internship */}
+      <section id="internship" className="py-16 px-6 bg-gray-100 dark:bg-gray-800">
+        <h3 className="text-3xl font-bold text-center mb-8">YCSAS Internship</h3>
+        <Card className="max-w-4xl mx-auto">
+          <CardContent className="p-6 space-y-3">
+            <p><strong>Internship Name:</strong> YCSAS Internship 2026</p>
+            <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Git</p>
+            <p>
+              Gained practical experience in building responsive web applications, version control with Git, component-based architecture in React, and professional coding standards.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="py-16 px-6">
+        <h3 className="text-3xl font-bold text-center mb-10">Projects & Tasks</h3>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {["Portfolio Website", "Mini React App", "HTML/CSS Landing Page"].map((project) => (
+            <motion.div whileHover={{ y: -8 }} key={project}>
+              <Card>
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-xl mb-2">{project}</h4>
+                  <p className="text-sm">Internship task focusing on clean UI, responsiveness, and interactivity.</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-16 px-6 bg-gray-100 dark:bg-gray-800">
+        <h3 className="text-3xl font-bold text-center mb-8">Contact</h3>
+        <div className="flex justify-center gap-6">
+          <a href="mailto:sumitaadhikary3@gmail.com"><Mail /></a>
+          <a href="https://github.com/sayantikaadhikary4/desktop-tutorial.git"><Github /></a>
+          <a href="#"><Linkedin /></a>
+        </div>
+        <p className="text-center mt-4">LinkedIn: sayantika-adhikary_Linkedln</p>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center p-4 text-sm">
+        © 2026 Sayantika Adhikary | YCSAS Internship Portfolio
+      </footer>
+    </div>
+  );
+}
