@@ -1,0 +1,27 @@
+import re
+
+def standardize_company_name(input_string):
+    """
+    Normalizes variations of CAF company names into:
+    'CAF SoftSol India Pvt Ltd.'
+    """
+
+    # Handle missing / empty entries gracefully
+    if not input_string or not isinstance(input_string, str):
+        return "CAF SoftSol India Pvt Ltd."
+
+    # Normalize spaces and case
+    clean_str = " ".join(input_string.split()).lower()
+
+    # Match CAF with any common variation
+    pattern = r"\bcaf\b.*(softsol|softsolution|solution|india|pvt|limited|ltd)"
+
+    if re.search(pattern, clean_str):
+        return "CAF SoftSol India Pvt Ltd."
+
+    # If CAF is present alone
+    if "caf" in clean_str:
+        return "CAF SoftSol India Pvt Ltd."
+
+    # Otherwise return original cleaned input
+    return input_string.strip()
