@@ -1,0 +1,22 @@
+def run_tests():
+    test_data = [
+        "CAF softsol",
+        "CAF solution",
+        "CAF       softSolution",
+        "CAF softSolution India Pvt Limited",
+        "CAF India Pvt Ltd",
+        "",
+        None,
+        "Google Inc."
+    ]
+
+    print(f"{'Input String':<35} | {'Output'}")
+    print("-" * 70)
+
+    for item in test_data:
+        result = standardize_company_name(item)
+        print(f"{str(item):<35} | {result}")
+
+
+if __name__ == "__main__":
+    run_tests()
